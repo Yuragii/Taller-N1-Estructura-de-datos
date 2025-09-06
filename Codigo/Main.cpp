@@ -1,4 +1,7 @@
 #include <iostream>
+#include "Alumno.cpp"
+#include "Curso.cpp"
+#include "LinkedList.cpp"
 using namespace std;
 
 void desplegarMenu(){

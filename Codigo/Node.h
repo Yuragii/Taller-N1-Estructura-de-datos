@@ -5,5 +5,8 @@ class Node {
         T dato;
         Node<T>* next;
     public:
-        
+        Node (T dato);
+        T getDato();
+        ~Node() {
+        }
 };

@@ -1,6 +1,6 @@
-#pragma once;
-#include "alumno.h"
-#include "curso.h"
+#pragma once
+#include "Alumno.h"
+#include "Curso.h"
 #include <bits/stdc++.h>
 using namespace std;
 

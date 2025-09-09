@@ -55,7 +55,7 @@ LinkedList<T>::~LinkedList() {
         }
 template <typename T>
 void LinkedList<T>::borrarDato(T dato) {
-    if (head == nullptr) return; // Lista vacía
+    if (head == nullptr) return "Lista Vacía"; // Lista vacía
 
     if (head->getDato() == dato) {
         Node<T>* temp = head;

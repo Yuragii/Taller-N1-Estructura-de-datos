@@ -1,4 +1,4 @@
-#include <Alumno.h>
+#include "Alumno.h"
 #include <bits/stdc++.h>
 using namespace std;
 

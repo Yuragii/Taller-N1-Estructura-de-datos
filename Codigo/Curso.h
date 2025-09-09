@@ -1,7 +1,7 @@
-#pragma once;
+#pragma once
 #include <bits/stdc++.h>
 #include "LinkedList.h"
-#include "alumno.h"
+#include "Alumno.h"
 using namespace std;
 
 class Curso{

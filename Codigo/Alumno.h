@@ -1,8 +1,9 @@
-#pragma once;
+#pragma once
 #include <bits/stdc++.h>
 #include "LinkedList.h"
-#include "curso.h"
+#include "Curso.h"
 using namespace std;
+
 class Alumno{
     private:
         int idAlumno;

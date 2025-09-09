@@ -1,9 +1,11 @@
-#include <iostream>
-#include "Alumno.cpp"
-#include "Curso.cpp"
-#include "LinkedList.cpp"
+#include <bits/stdc++.h>
+#include "Alumno.h"
+#include "Curso.h"
+#include "LinkedList.h"
+#include "Notas.h"
 using namespace std;
-
+//  g++ -o m Main.cpp
+//    ./m
 void desplegarMenu(){
     cout << "Menu principal: " << endl;
     cout << "1. Manejo de Alumnos" << endl;
@@ -42,10 +44,19 @@ void menuConsultas(){
     cout << "e) Atras" << endl;
 }
 int main() {
+    LinkedList<Alumno> listaAlumnos = LinkedList<Alumno>();
+    LinkedList<Curso> listaCursos = LinkedList<Curso>();
+    LinkedList<Nota> listaNotas = LinkedList<Nota>();
     int opcion;
     string opcionChar;
     desplegarMenu();
     cin >> opcion;
+
+    while (!(cin >> opcion) || opcion < 1 || opcion > 6) {
+        cout << "Entrada inválida. Por favor ingrese un número entre 1 y 6: ";
+        cin.clear(); 
+        cin.ignore(numeric_limits<streamsize>::max(), '\n'); 
+    }
 
     while (opcion != 6){
         switch (opcion){
@@ -54,6 +65,9 @@ int main() {
                 cin >> opcionChar;
                 while (opcionChar != "d"){
                     if (opcionChar == "a" ){
+                        Alumno nuevoAlumno;
+                        cout << "Ingrese ID del alumno: "<< endl;
+                        
                         cout << "Crear alumno" << endl;
                         
                     } else if (opcionChar == "b"){
@@ -168,5 +182,3 @@ int main() {
     return 0;
 }
 
-//  g++ -o m Main.cpp
-//    ./m

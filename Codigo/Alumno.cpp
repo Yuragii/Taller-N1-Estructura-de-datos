@@ -1,5 +1,7 @@
 #include "Alumno.h"
-#include <bits/stdc++.h>
+#include "Curso.h"
+#include <string>
+#include <iostream>
 using namespace std;
 
 Alumno::Alumno() {
@@ -43,7 +45,9 @@ void Alumno::setCarrera(string carrera) {
 void Alumno::setFechaIngreso(string fechaIngreso) {
     this->fechaIngreso = fechaIngreso;
 }
-Alumno::~Alumno() {
-    // Destructor
+
+void Alumno::añadirCursoAlumno(Curso curso) {
+    this->listaCursos.append(curso);
 }
 
+Alumno::~Alumno() = default; // Destructor

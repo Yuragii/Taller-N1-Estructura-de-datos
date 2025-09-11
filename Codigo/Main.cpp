@@ -44,16 +44,16 @@ void menuConsultas(){
     cout << "e) Atras" << endl;
 }
 int main() {
-    LinkedList<Alumno> listaAlumnos = LinkedList<Alumno>();
-    LinkedList<Curso> listaCursos = LinkedList<Curso>();
-    LinkedList<Nota> listaNotas = LinkedList<Nota>();
+    LinkedList<Alumno> listaAlumnos;
+    LinkedList<Curso> listaCursos;
+    LinkedList<Nota> listaNotas;
     int opcion;
     string opcionChar;
     desplegarMenu();
     cin >> opcion;
 
     while (!(cin >> opcion) || opcion < 1 || opcion > 6) {
-        cout << "Entrada inválida. Por favor ingrese un número entre 1 y 6: ";
+        cout << "Entrada invalida Por favor ingrese un número entre 1 y 6: ";
         cin.clear(); 
         cin.ignore(numeric_limits<streamsize>::max(), '\n'); 
     }
@@ -65,7 +65,7 @@ int main() {
                 cin >> opcionChar;
                 while (opcionChar != "d"){
                     if (opcionChar == "a" ){
-                        Alumno nuevoAlumno;
+                        
                         cout << "Ingrese ID del alumno: "<< endl;
                         
                         cout << "Crear alumno" << endl;

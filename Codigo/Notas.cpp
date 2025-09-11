@@ -1,5 +1,6 @@
 #include "Notas.h"
-#include <bits/stdc++.h>
+#include <string>
+#include <iostream>
 using namespace std;
 Nota::Nota() {
     this->alumno = Alumno();
@@ -24,6 +25,4 @@ void Nota::setCurso(Curso curso) {
 void Nota::setValorNota(float valorNota) {
     this->valorNota = valorNota;
 }
-Nota::~Nota() {
-    // Destructor
-}
+Nota::~Nota()= default; // Destructor

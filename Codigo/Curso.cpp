@@ -1,5 +1,7 @@
 #include "Curso.h"
-#include <bits/stdc++.h>
+#include "Alumno.h"
+#include <string>
+#include <iostream>
 using namespace std;
 
 Curso::Curso() {
@@ -44,5 +46,21 @@ void Curso::setProfesor(string profesor) {
     this->profesor = profesor;
 }
 void Curso::añadirAlumnoACurso(Alumno alumno) {
-    this->listaAlumnos.append(alumno);
+    if (cantMaxAlumnos > 0 ) {
+        int count = 0;
+        Node<Alumno>* current = listaAlumnos.getHead();
+        while (current != nullptr) {
+            count++;
+            current = current->getNext();
+        }
+        if (count >= cantMaxAlumnos) {
+            cout << "No se puede añadir más alumnos, se ha alcanzado el máximo de " << cantMaxAlumnos << " alumnos." << endl;
+            return;
+        } 
+        this->listaAlumnos.append(alumno);
+        cout << "Añadiendo alumno al curso." << endl;
+    }
 }
+
+Curso::~Curso() = default; // Destructor
+    

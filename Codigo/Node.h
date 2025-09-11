@@ -1,5 +1,6 @@
 #pragma once
-#include <bits/stdc++.h>
+#include <iostream>
+#include <string>
 using namespace std;
 template <typename T>
 class Node {
@@ -11,9 +12,20 @@ class Node {
             this->dato = dato;
             this->next = nullptr;
         }
-        getDato() {
+        T getDato() {
             return this->dato;
-}
-        ~Node() {
         }
+        void setDato(T dato) {
+            this->dato = dato;
+        }
+
+        void setNext(Node<T>* next) {
+            this->next = next;
+        }
+
+        Node<T>* getNext() {
+            return this->next;
+        }
+
+        ~Node() = default;
 };

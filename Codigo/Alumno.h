@@ -1,8 +1,11 @@
 #pragma once
-#include <bits/stdc++.h>
+#include <string>
+#include <iostream>
 #include "LinkedList.h"
 #include "Curso.h"
 using namespace std;
+
+class Curso;
 
 class Alumno{
     private:
@@ -14,6 +17,7 @@ class Alumno{
         LinkedList<Curso> listaCursos;
     public:
         Alumno();
+
         int getIdAlumno();
         string getNombre();
         string getApellido();
@@ -25,6 +29,7 @@ class Alumno{
         void setApellido(string apellido);
         void setCarrera(string carrera);
         void setFechaIngreso(string fechaIngreso);
+        void añadirCursoAlumno(Curso curso);
         ~Alumno();
 
 };

@@ -17,7 +17,7 @@ class LinkedList {
             this->head = head;
         }
 
-    void append(T dato) {
+    void append(const T& dato) {
         Node<T>* newNode = new Node<T>(dato);
         if (this->head == nullptr) {
             this->head = newNode;
@@ -30,30 +30,9 @@ class LinkedList {
         }
     }
 
-    void display() {
-        Node<T>* current = this->head;
-        while (current != nullptr) {
-            cout << current->getDato() << " -> ";
-            current = current->getNext();
-        }
-        cout << "nullptr" << endl;
-    }
-
     Node<T>* getHead () const {
         return this->head;
     }
-
-    Node<T>* find(const T& dato) const {
-        Node<T>* current = this->head;
-        while (current != nullptr) {
-            if (current->getDato() == dato) {
-                return current;
-            }
-            current = current->getNext();
-        }
-        return nullptr;
-    }
-
 
 
     void borrarDato(T dato) {
@@ -111,7 +90,6 @@ class LinkedList {
             delete nodoAEliminar;
         }
 }
-
 
     ~LinkedList() {
         Node<T>* current = head;

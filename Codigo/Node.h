@@ -12,10 +12,10 @@ class Node {
             this->dato = dato;
             this->next = nullptr;
         }
-        T& getDato ()  {
+        T& getDato()  {
             return this->dato;
         }
-        const T& getDatoB() const {
+        const T& getDato() const {
             return this->dato;
         }
 

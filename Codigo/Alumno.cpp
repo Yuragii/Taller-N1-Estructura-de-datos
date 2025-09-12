@@ -10,7 +10,7 @@ Alumno::Alumno() {
     this->apellido = "";
     this->carrera = "";
     this->fechaIngreso = "";
-    this->listaCursos = LinkedList<Curso>();
+    this->listaCursos = LinkedList<Curso*>();
 }
 int Alumno::getIdAlumno() const {
     return this->idAlumno;
@@ -27,11 +27,11 @@ string Alumno::getCarrera() const{
 string Alumno::getFechaIngreso() const{
     return this->fechaIngreso;
 }
-LinkedList<Curso>& Alumno::getListaCursos() {
+LinkedList<Curso*>& Alumno::getListaCursos() {
     return this->listaCursos;
 }
 
-const LinkedList<Curso>& Alumno::getListaCursos() const {
+const LinkedList<Curso*>& Alumno::getListaCursos() const {
     return this->listaCursos;
 }
 void Alumno::setIdAlumno(int idAlumno) {
@@ -50,7 +50,7 @@ void Alumno::setFechaIngreso(string fechaIngreso) {
     this->fechaIngreso = fechaIngreso;
 }
 
-void Alumno::añadirCursoAlumno(Curso curso) {
+void Alumno::añadirCursoAlumno(Curso* curso) {
     this->listaCursos.append(curso);
 }
 

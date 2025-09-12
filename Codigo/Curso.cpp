@@ -10,7 +10,7 @@ Curso::Curso() {
     this->cantMaxAlumnos = 0;
     this->carrera = "";
     this->profesor = "";
-    this->listaAlumnos = LinkedList<Alumno>();
+    this->listaAlumnos = LinkedList<Alumno*>();
 }
 int Curso::getIdCurso () const {
     return this->idCurso;
@@ -27,7 +27,10 @@ string Curso::getCarrera() const {
 string Curso::getProfesor() const {
     return this->profesor;
 }
-LinkedList<Alumno> Curso::getListaAlumnos() const {
+LinkedList<Alumno*>& Curso::getListaAlumnos()  {
+    return this->listaAlumnos;
+}
+const LinkedList<Alumno*>& Curso::getListaAlumnos() const {
     return this->listaAlumnos;
 }
 void Curso::setIdCurso(int idCurso) {
@@ -45,10 +48,10 @@ void Curso::setCarrera(string carrera) {
 void Curso::setProfesor(string profesor) {
     this->profesor = profesor;
 }
-void Curso::añadirAlumnoACurso(Alumno alumno) {
+void Curso::añadirAlumnoACurso(Alumno* alumno) {
     if (cantMaxAlumnos > 0 ) {
         int count = 0;
-        Node<Alumno>* current = listaAlumnos.getHead();
+        Node<Alumno*>* current = listaAlumnos.getHead();
         while (current != nullptr) {
             count++;
             current = current->getNext();

@@ -14,7 +14,7 @@ class Curso{
         int cantMaxAlumnos;
         string carrera;
         string profesor;
-        LinkedList<Alumno> listaAlumnos;
+        LinkedList<Alumno*> listaAlumnos;
     public:
         Curso();
         
@@ -23,13 +23,14 @@ class Curso{
         int getCantMaxAlumnos() const;
         string getCarrera() const;
         string getProfesor() const;
-        LinkedList<Alumno> getListaAlumnos() const;
+        LinkedList<Alumno*>& getListaAlumnos();
+        const LinkedList<Alumno*>& getListaAlumnos() const;
         void setIdCurso(int idCurso);
         void setNombreCurso(string nombreCurso);
         void setCantMaxAlumnos(int cantMaxAlumnos);
         void setCarrera(string carrera);
         void setProfesor(string profesor);
-        void añadirAlumnoACurso(Alumno alumno);
+        void añadirAlumnoACurso(Alumno* alumno);
         ~Curso();
         
 };

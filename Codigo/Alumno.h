@@ -14,7 +14,7 @@ class Alumno{
         string apellido;
         string carrera;
         string fechaIngreso;
-        LinkedList<Curso> listaCursos;
+        LinkedList<Curso*> listaCursos;
     public:
         Alumno();
 
@@ -23,14 +23,14 @@ class Alumno{
         string getApellido() const;
         string getCarrera() const;
         string getFechaIngreso() const;
-        LinkedList<Curso>& getListaCursos();
-        const LinkedList<Curso>& getListaCursos() const;
+        LinkedList<Curso*>& getListaCursos();
+        const LinkedList<Curso*>& getListaCursos() const;
         void setIdAlumno(int idAlumno);
         void setNombre(string nombre);
         void setApellido(string apellido);
         void setCarrera(string carrera);
         void setFechaIngreso(string fechaIngreso);
-        void añadirCursoAlumno(Curso curso);
+        void añadirCursoAlumno(Curso* curso);
         ~Alumno();
 
 };

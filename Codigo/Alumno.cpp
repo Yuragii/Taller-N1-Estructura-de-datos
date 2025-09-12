@@ -12,22 +12,26 @@ Alumno::Alumno() {
     this->fechaIngreso = "";
     this->listaCursos = LinkedList<Curso>();
 }
-int Alumno::getIdAlumno() {
+int Alumno::getIdAlumno() const {
     return this->idAlumno;
 }
-string Alumno::getNombre() {
+string Alumno::getNombre() const {
     return this->nombre;
 }
-string Alumno::getApellido() {
+string Alumno::getApellido() const{
     return this->apellido;
 }
-string Alumno::getCarrera() {
+string Alumno::getCarrera() const{
     return this->carrera;
 }
-string Alumno::getFechaIngreso() {
+string Alumno::getFechaIngreso() const{
     return this->fechaIngreso;
 }
-LinkedList<Curso> Alumno::getListaCursos() {
+LinkedList<Curso>& Alumno::getListaCursos() {
+    return this->listaCursos;
+}
+
+const LinkedList<Curso>& Alumno::getListaCursos() const {
     return this->listaCursos;
 }
 void Alumno::setIdAlumno(int idAlumno) {

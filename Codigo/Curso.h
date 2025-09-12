@@ -18,12 +18,12 @@ class Curso{
     public:
         Curso();
         
-        int getIdCurso();
-        string getNombreCurso();
-        int getCantMaxAlumnos();
-        string getCarrera();
-        string getProfesor();
-        LinkedList<Alumno> getListaAlumnos();
+        int getIdCurso() const;
+        string getNombreCurso() const;
+        int getCantMaxAlumnos() const;
+        string getCarrera() const;
+        string getProfesor() const;
+        LinkedList<Alumno> getListaAlumnos() const;
         void setIdCurso(int idCurso);
         void setNombreCurso(string nombreCurso);
         void setCantMaxAlumnos(int cantMaxAlumnos);

@@ -12,9 +12,9 @@ class Nota{
         float valorNota;
     public:
         Nota();
-        Alumno getAlumno();
-        Curso getCurso();
-        float getValorNota();
+        Alumno getAlumno() const;
+        Curso getCurso() const;
+        float getValorNota() const;
         void setAlumno(Alumno alumno);
         void setCurso(Curso curso);
         void setValorNota(float valorNota);

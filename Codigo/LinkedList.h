@@ -13,6 +13,10 @@ class LinkedList {
             this->head = nullptr;
     }
 
+    void setHead(Node<T>* head) {
+            this->head = head;
+        }
+
     void append(T dato) {
         Node<T>* newNode = new Node<T>(dato);
         if (this->head == nullptr) {
@@ -35,11 +39,11 @@ class LinkedList {
         cout << "nullptr" << endl;
     }
 
-    Node<T>* getHead()  {
+    Node<T>* getHead () const {
         return this->head;
     }
 
-    Node<T>* find(T dato) {
+    Node<T>* find(const T& dato) const {
         Node<T>* current = this->head;
         while (current != nullptr) {
             if (current->getDato() == dato) {
@@ -62,6 +66,7 @@ class LinkedList {
             Node<T>* temp = head;
             head = head->getNext();
             delete temp;
+            cout << "Dato eliminado" << endl;
             return;
         }
 
@@ -76,6 +81,38 @@ class LinkedList {
             delete temp;
         }
     }
+
+    
+    void clear() {
+        Node<T>* actual = head;
+        while (actual != nullptr) {
+            Node<T>* siguiente = actual->getNext();
+            delete actual;
+            actual = siguiente;
+        }
+        head = nullptr;
+    }
+    void remove(Node<T>* nodoAEliminar) {
+        if (!head || !nodoAEliminar) return;
+
+        if (head == nodoAEliminar) {
+            head = head->getNext();
+            delete nodoAEliminar;
+            return;
+        }
+
+        Node<T>* actual = head;
+        while (actual->getNext() && actual->getNext() != nodoAEliminar) {
+            actual = actual->getNext();
+        }
+
+        if (actual->getNext() == nodoAEliminar) {
+            actual->setNext(nodoAEliminar->getNext());
+            delete nodoAEliminar;
+        }
+}
+
+
     ~LinkedList() {
         Node<T>* current = head;
         Node<T>* nextNode;

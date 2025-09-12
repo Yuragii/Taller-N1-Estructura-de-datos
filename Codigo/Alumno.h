@@ -18,12 +18,13 @@ class Alumno{
     public:
         Alumno();
 
-        int getIdAlumno();
-        string getNombre();
-        string getApellido();
-        string getCarrera();
-        string getFechaIngreso();
-        LinkedList<Curso> getListaCursos();
+        int getIdAlumno() const;
+        string getNombre() const;
+        string getApellido() const;
+        string getCarrera() const;
+        string getFechaIngreso() const;
+        LinkedList<Curso>& getListaCursos();
+        const LinkedList<Curso>& getListaCursos() const;
         void setIdAlumno(int idAlumno);
         void setNombre(string nombre);
         void setApellido(string apellido);

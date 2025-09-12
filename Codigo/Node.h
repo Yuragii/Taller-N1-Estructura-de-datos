@@ -12,9 +12,13 @@ class Node {
             this->dato = dato;
             this->next = nullptr;
         }
-        T getDato() {
+        T& getDato ()  {
             return this->dato;
         }
+        const T& getDatoB() const {
+            return this->dato;
+        }
+
         void setDato(T dato) {
             this->dato = dato;
         }
@@ -23,7 +27,7 @@ class Node {
             this->next = next;
         }
 
-        Node<T>* getNext() {
+        Node<T>* getNext () const {
             return this->next;
         }
 

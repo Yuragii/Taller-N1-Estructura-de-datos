@@ -12,22 +12,22 @@ Curso::Curso() {
     this->profesor = "";
     this->listaAlumnos = LinkedList<Alumno>();
 }
-int Curso::getIdCurso() {
+int Curso::getIdCurso () const {
     return this->idCurso;
 }
-string Curso::getNombreCurso() {
+string Curso::getNombreCurso() const {
     return this->nombreCurso;
 }
-int Curso::getCantMaxAlumnos() {
+int Curso::getCantMaxAlumnos() const {
     return this->cantMaxAlumnos;
 }
-string Curso::getCarrera() {
+string Curso::getCarrera() const {
     return this->carrera;
 }
-string Curso::getProfesor() {
+string Curso::getProfesor() const {
     return this->profesor;
 }
-LinkedList<Alumno> Curso::getListaAlumnos() {
+LinkedList<Alumno> Curso::getListaAlumnos() const {
     return this->listaAlumnos;
 }
 void Curso::setIdCurso(int idCurso) {

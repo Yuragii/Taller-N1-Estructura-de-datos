@@ -7,13 +7,13 @@ Nota::Nota() {
     this->curso = Curso();
     this->valorNota = 0.0;
 }
-Alumno Nota::getAlumno() {
+Alumno Nota::getAlumno() const{
     return this->alumno;
 }
-Curso Nota::getCurso() {
+Curso Nota::getCurso() const{
     return this->curso;
 }
-float Nota::getValorNota() {
+float Nota::getValorNota() const{
     return this->valorNota;
 }
 void Nota::setAlumno(Alumno alumno) {
